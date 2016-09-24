@@ -30,7 +30,7 @@
     'use strict';
 
     // https://s9.postimg.org/di0oxbfy7/image.jpg
-    var bgImage = GM_getValue("bgImage", 'https://s16.postimg.io/no4n8tu45/abstract_mosaic_background.png');
+    var bgImage = GM_getValue("bgImage", 'https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/bg-1080p.png');
 
     var loadingCss = '#loading { position: fixed; width: 100%; height: 100%; min-height: 100vh; display: initial; z-index: 99999999999999; background: #262626; }'+
         '.loading-image { margin: auto; position: relative; display: block; top: 50%; transform: translate(0, -50%); -moz-animation:3s rotate infinite linear; -webkit-animation:3s rotate infinite linear; } '+
