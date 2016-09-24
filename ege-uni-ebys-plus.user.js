@@ -1,20 +1,24 @@
 // ==UserScript==
-// @name         Ege Üniversitesi EBYS +
+// @name         Ege Ãœniversitesi EBYS +
 // @namespace    http://bekiruzun.com
 // @version      0.5.0
-// @description  Restyles EBYS
+// @description  Re-styles EBYS
 // @author       Bekir Uzun
 // @match        http://ebys.ege.edu.tr/*
 // @match        https://ebys.ege.edu.tr/*
 // @run-at       document-start
-// @icon         https://s22.postimg.org/w6sz1bp75/ege.png
+// @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/ege-logo.png
 // @license      https://creativecommons.org/licenses/by-sa/4.0/
+// @homepage	 https://github.com/BekirUzun/EgeEBYSPlus
+// @supportURL   https://github.com/BekirUzun/EgeEBYSPlus/issues
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
+// @updateURL	 https://github.com/BekirUzun/EgeEBYSPlus/blob/master/ege-uni-ebys-plus.user.js
+// @downloadURL  https://github.com/BekirUzun/EgeEBYSPlus/blob/master/ege-uni-ebys-plus.user.js
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 // @grant    	 GM_setValue
 // @grant    	 GM_getValue
 // @grant   	 GM_deleteValue
-// @require      https://code.jquery.com/jquery-3.1.0.min.js
 // ==/UserScript==
 
 /*
@@ -119,15 +123,15 @@
     function DOM_ContentReady() {
 
         if (page == "login"){
-            $('.cssLogo:first').html('<img id="imgLogo" title="Bilgi Sistemleri"  alt="Üni-Pa A.Þ. Bilgi Sistemleri" style="border-width:0px;" src="https://s13.postimg.org/52zp7vqw7/ege.png" />');
+            $('.cssLogo:first').html('<img id="imgLogo" title="Bilgi Sistemleri"  alt="Ãœni-Pa A.Åž. Bilgi Sistemleri" style="border-width:0px;" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/ege-logo.png" />');
             $('#btnLogin').addClass('btn');
             $('#lblVersiyon').html($('#lblVersiyon').html() + ' +');
 
             var options;
             if(loc.includes("en-US")){
-                options = '<input type="button" id="change-bg" value="Change Background" style="margin-right: 5px;" /><select id="lang" style="margin-right: 10px;"><option value="en-US">English</option><option value="tr-TR">Türkçe</option></select>';
+                options = '<input type="button" id="change-bg" value="Change Background" style="margin-right: 5px;" /><select id="lang" style="margin-right: 10px;"><option value="en-US">English</option><option value="tr-TR">TÃ¼rkÃ§e</option></select>';
             } else {
-                options = '<input type="button" id="change-bg" value="Arkaplaný Deðiþtir"  style="margin-right: 5px;" /><select id="lang" style="margin-right: 10px;"><option value="tr-TR">Türkçe</option><option value="en-US">English</option></select>';
+                options = '<input type="button" id="change-bg" value="ArkaplanÄ± DeÄŸiÅŸtir"  style="margin-right: 5px;" /><select id="lang" style="margin-right: 10px;"><option value="tr-TR">TÃ¼rkÃ§e</option><option value="en-US">English</option></select>';
             }
             $('#form1 > table > tbody > tr:nth-child(2)').html('<td align="right">'+ options +'</td>');
             document.getElementById("lang").addEventListener("change", function(){
@@ -138,7 +142,7 @@
             });
 
         } else if (page == "dashboard"){
-            $('.dashboardUiIcons.logo').html('<img id="ctl00_imgMusteriLogo" src="https://s13.postimg.org/52zp7vqw7/ege.png" style="height:60px;width:60px;border-width:0px;">');
+            $('.dashboardUiIcons.logo').html('<img id="ctl00_imgMusteriLogo" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/ege-logo.png" style="height:60px;width:60px;border-width:0px;">');
             $('#ctl00_lblVersiyon').html($('#ctl00_lblVersiyon').html() + ' +');
             $('.inner_button').html('<a class="btn" id="inner_btn">'+ $(".inner_button").html() +'</a>');
             $('.ui-tabs-icons.ui-tabs-icon1').addClass('fa fa-lg fa-home');
