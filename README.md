@@ -1,6 +1,5 @@
 # Ege Üniversitesi EBYS +
-Re-styles student login system of Ege Üniversity
+Ege Üniversitesi Öğrenci Giriş sisteminin arayüzünü değiştirir.
 
-## Supported Browsers
+## Desteklenen Tarayıcılar
 * ![Chrome](https://raw.githubusercontent.com/BekirUzun/AzLyricsPlus/master/chrome.png) Chrome &#10004;
-
