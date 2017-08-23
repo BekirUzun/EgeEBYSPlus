@@ -7,7 +7,7 @@
 // @match        http://ebys.ege.edu.tr/*
 // @match        https://ebys.ege.edu.tr/*
 // @run-at       document-start
-// @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/ege-logo.png
+// @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png
 // @license      https://creativecommons.org/licenses/by-sa/4.0/
 // @homepage	 https://github.com/BekirUzun/EgeEBYSPlus
 // @supportURL   https://github.com/BekirUzun/EgeEBYSPlus/issues
@@ -30,7 +30,7 @@
 	'use strict';
 
 	// https://s9.postimg.org/di0oxbfy7/image.jpg
-	var bgImage = GM_getValue("bgImage", 'https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/bg-1080p.png');
+	var bgImage = GM_getValue("bgImage", 'https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-1080p.png');
 
 	var loadingCss = '#loading { position: fixed; top: 0px; width: 100%; height: 100%; min-height: 100vh; display: initial; z-index: 99999999999999; background: #262626; }'+
 		'.loading-image { margin: auto; position: relative; display: block; top: 50%; transform: translate(0, -50%); -moz-animation:3s rotate infinite linear; -webkit-animation:3s rotate infinite linear; } '+
@@ -137,7 +137,7 @@
 	function DOM_ContentReady() {
 
 		if (page == "login"){
-			$('.cssLogo:first').html('<img id="imgLogo" title="Bilgi Sistemleri"  alt="Üni-Pa A.Ş. Bilgi Sistemleri" style="border-width:0px;" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/ege-logo.png" />');
+			$('.cssLogo:first').html('<img id="imgLogo" title="Bilgi Sistemleri"  alt="Üni-Pa A.Ş. Bilgi Sistemleri" style="border-width:0px;" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png" />');
 			$('#btnLogin').addClass('btn');
 			$('#lblVersiyon').html($('#lblVersiyon').html() + ' +');
 
@@ -158,7 +158,7 @@
 			});
 
 		} else if (page == "dashboard"){
-			$('.dashboardUiIcons.logo').html('<img id="ctl00_imgMusteriLogo" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/ege-logo.png" style="height:60px;width:60px;border-width:0px;">');
+			$('.dashboardUiIcons.logo').html('<img id="ctl00_imgMusteriLogo" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png" style="height:60px;width:60px;border-width:0px;">');
 			$('#ctl00_lblVersiyon').html($('#ctl00_lblVersiyon').html() + ' +');
 			$('.inner_button').html('<a class="btn" id="inner_btn">'+ $(".inner_button").html() +'</a>');
 			$('.ui-tabs-icons.ui-tabs-icon1').addClass('fa fa-lg fa-home');

@@ -23,7 +23,7 @@ Not görüntüleme sayfasındaki sütunların üzerine tılayarak küçültebili
 3. "Kur" veya "Devam et" gibi bir butona basıp kurulumu tamamlayın.
 
 
-[login]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/login-ss.png "Giriş Sayfası"
-[dashboard]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/dashboard-ss.png "Anasayfa Sayfası"
+[login]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/login-ss.png "Giriş Sayfası"
+[dashboard]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/dashboard-ss.png "Anasayfa Sayfası"
 
 
