@@ -4,9 +4,15 @@ Ege Üniversitesi Öğrenci Giriş sisteminin arayüzünü değiştirir ve isted
 - Anasayfa (girişten sonraki panel)
 - Not Görüntüleme sayfası
 
+## Not görüntüleme
 Not görüntüleme sayfasındaki sütunların üzerine tılayarak küçültebilir, "+" sembolune basıp eski haline çevirebilirsiniz. Ayrıca çok kullanılmayan sütunlar (ders kodu, fakülte, grup no vs.) otomatik olarak küçültülmüştür.
 
-**Not:** Bu eklenti sadece arayüzü değiştirir. Verileriniz ile ilgili herhangi bir değişiklik yapmaz. Ama dilerseniz notları %25 arttırma ile ilgili bir özellik isteği ("enhancement" etiketi) gönderebilirsiniz.
+## Arkaplan resmi
+Arkaplanı değiştirmek için istediğiniz resmin doğrudan linkini yapıştırmalısınız. Link, güvenli internet protokolü (https://) kullanan bir sitenin barındırdığı fotoğraf linki olmalıdır. Varsayılan arkaplan resim linki: 
+
+https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-1080p.png
+
+**Not:** Bu eklenti sadece arayüzü değiştirir. Verileriniz ile ilgili herhangi bir değişiklik yapmaz. Ama dilerseniz notları %25 arttırma ile ilgili bir özellik isteği gönderebilirsiniz.
 
 ## Desteklenen Tarayıcılar
 [![Chrome &#10004](https://img.shields.io/badge/Chrome-%E2%9C%94-green.svg?style=flat-square)](http://www.google.com/chrome/) -   [![Tampermonkey](https://img.shields.io/badge/Tampermonkey--green.svg?style=flat-square)](https://tampermonkey.net/) ile kullanılabilir

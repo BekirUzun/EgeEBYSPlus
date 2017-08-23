@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ege Üniversitesi EBYS +
 // @namespace    http://bekiruzun.com
-// @version      0.5.9
+// @version      1.0.0
 // @description  Re-styles EBYS
 // @author       Bekir Uzun
 // @match        http://ebys.ege.edu.tr/*
@@ -29,16 +29,15 @@
 (function() {
 	'use strict';
 
-	// https://s9.postimg.org/di0oxbfy7/image.jpg
 	var bgImage = GM_getValue("bgImage", 'https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-1080p.png');
 
 	var loadingCss = '#loading { position: fixed; top: 0px; width: 100%; height: 100%; min-height: 100vh; display: initial; z-index: 99999999999999; background: #262626; }'+
-		'.loading-image { margin: auto; position: relative; display: block; top: 50%; transform: translate(0, -50%); -moz-animation:3s rotate infinite linear; -webkit-animation:3s rotate infinite linear; } '+
+		'.loading-image { width:64px; height:64px; margin: auto; position: relative; display: block; top: 45%; transform: translate(0, -50%); -moz-animation:3s rotate infinite linear; -webkit-animation:3s rotate infinite linear; } '+
 		'@-moz-keyframes rotate { 0%{ -moz-transform:rotate(0deg); -moz-transform-origin:50% 50%; } 100%{ -moz-transform:rotate(360deg); } } '+
 		'@-webkit-keyframes rotate { 0%{ -webkit-transform:rotate(0deg); -webkit-transform-origin:50% 50%; } 100%{ -webkit-transform:rotate(360deg); } }';
 
 	var loginCss = 'body { background:  url('+ bgImage +') !important; background-size: cover !important; color: #eee !important; }' +
-		'input[type="text"], input[type="button"], input[type="password"], input[type="email"], select { border-radius: 3px !important; border: none !important; outline: 0 !important; line-height: 1.5em  !important; height: 2em !important; padding: 0 1em !important; background: rgba(255, 255, 255, 0.7) !important; }' +
+		'input[type="text"], input[type="button"], input[type="password"], input[type="email"], select { transition: box-shadow .2s ease; border-radius: 3px !important; border: none !important; outline: 0 !important; line-height: 1.5em  !important; height: 2em !important; padding: 0 1em !important; background: rgba(255, 255, 255, 0.7) !important; }' +
 		'input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus { box-shadow: 0 0 10px 2px #2138b2; }'+
 		'input[type="button"]:hover, select:hover, input[type="select"]:hover { background: rgba(255, 255, 255, 0.8) !important; box-shadow: 0 0 5px 1px #2138b2 !important; }'+
 		'#rightTD > table {background: rgba(0,0,0,0.7); border-radius: 20px; padding: 0 2em 1em 2em; } '+
@@ -62,7 +61,7 @@
 		'.file { background: none !important; padding: 0px 0px 5px 5px !important; transition: color 0.2s ease;}'+
 		'.file:hover { color: #2138b2 !important; }'+
 		'.content{ border-radius: 10px; height: 88% !important;}'+
-		'input[type="text"],  input[type="button"], input[type="password"], input[type="email"], input, select { background-image: none !important; border-radius: 3px !important; border: none !important; outline: 0 !important; line-height: 1.5em  !important; height: 2em !important; padding: 0 1em !important; background: rgba(255, 255, 255, 0.7) !important; }' +
+		'input[type="text"],  input[type="button"], input[type="password"], input[type="email"], input, select { transition: box-shadow .2s ease; background-image: none !important; border-radius: 3px !important; border: none !important; outline: 0 !important; line-height: 1.5em  !important; height: 2em !important; padding: 0 1em !important; background: rgba(255, 255, 255, 0.7) !important; }' +
 		'input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus { box-shadow: 0 0 2px 2px #2138b2; !important}'+
 		'input[type="button"]:hover, select:hover, input[type="select"]:hover, input[type="submit"]:hover { background: rgba(255, 255, 255, 0.8) !important; box-shadow: 0 0 0 2px #2138b2 !important; }'+
 		'#ctl00_ddlAppStyles_Input { -webkit-appearance: none; appearance: none; }'+
@@ -107,11 +106,11 @@
 		"#tblNotlar > tbody > tr:nth-child(1) > td > fieldset > table > tbody > tr:nth-child(1) { /* background: #6688ff !important; color: white !important; */ font-weight: bold;  }" +
 		"td { text-align:center; overflow:hidden; }" +
 		".small { white-space: nowrap; }";
-	
+
 	var loc = "" + window.location;
 	var page;
 	if (loc.includes("login")){
-		$('html').append('<div id="loading"><img class="loading-image" src="https://s10.postimg.org/47mbmg39l/ege_64.png" /> </div>');
+		$('html').append('<div id="loading"><img class="loading-image" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png" /> </div>');
 		addStyle(loadingCss);
 		addStyle(loginCss);
 		page = "login";
@@ -123,7 +122,7 @@
 			}
 		}, 250);
 
-		$('html').append('<div id="loading"><img class="loading-image" src="https://s10.postimg.org/47mbmg39l/ege_64.png" /> </div>');
+		$('html').append('<div id="loading"><img class="loading-image" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png" /> </div>');
 		addStyle(loadingCss);
 		addStyle(mainCss);
 		page = "dashboard";
@@ -164,27 +163,27 @@
 			$('.ui-tabs-icons.ui-tabs-icon1').addClass('fa fa-lg fa-home');
 			$('.ui-tabs-icons.ui-tabs-icon2').addClass('fa fa-lg fa-question-circle-o');
 			$('.ui-tabs-icons.imgMessages').addClass('fa fa-lg fa-envelope-o');
-			
-			$('#divAdmin').prepend('<i class="fa fa_top fa-graduation-cap " aria-hidden="true"></i>').click(function() { 
-				window.location.href = 'https://ebys.ege.edu.tr/UniFrame/profil/default.aspx'; 
+
+			$('#divAdmin').prepend('<i class="fa fa_top fa-graduation-cap " aria-hidden="true"></i>').click(function() {
+				window.location.href = 'https://ebys.ege.edu.tr/UniFrame/profil/default.aspx';
 			});
-			
-			$('#divLogin').prepend('<i class="fa fa_top fa-power-off" aria-hidden="true"></i>').click(function() { 
-				window.location.href = 'https://ebys.ege.edu.tr/login.aspx'; 
+
+			$('#divLogin').prepend('<i class="fa fa_top fa-power-off" aria-hidden="true"></i>').click(function() {
+				window.location.href = 'https://ebys.ege.edu.tr/login.aspx';
 			});
-			
+
 			$('.divSupport').click(function() {
-				__doPostBack('ctl00$DashAppHeader$ctl02$lnkSupport',''); 
+				__doPostBack('ctl00$DashAppHeader$ctl02$lnkSupport','');
 			});
 			$('#ctl00_DashAppHeader_ctl02_divSupport').prepend('<i class="fa fa_top fa-info-circle" aria-hidden="true"></i>');
 			$('#ctl00_DashAppHeader_ctl02_lblTabHelp').prepend('<i class="fa fa_top fa-question-circle-o" aria-hidden="true"></i>');
 			$('.file').prepend('<i class="fa fa-lg fa_file fa-folder" aria-hidden="true"></i>');
-			
+
 			$('.inner_btn').off("click");
-			$('.inner_btn').click(function() { 
-				btnClick($(this)); 
+			$('.inner_btn').click(function() {
+				btnClick($(this));
 			});
-			
+
 			$('.searchBoxInput').contents().unwrap();
 			$('#ctl00_ddlAppStyles_Input').val('Unipa Modern');
 			$('#ctl00_ddlAppStyles_DropDown > div > ul > li').html('Unipa Modern');
@@ -194,17 +193,18 @@
 			$('td.widgetTitleLeft, td.widgetTitleRight, #divAdminDetail, #divLoginDetail, #divSupportDetail, .appheaderhelp > img, .dashboardUiIcons.divArrow, #ctl00_DashAppHeader_ctl02_divSupport > div').remove();
 
 		} else if (page == "grades"){
-			
-			var hideList = [0, 2, 3, 4];
-			var deleteList = [6];
+
+			var hideList = [0, 2, 3, 4]; // this columns will be hidden at start
+			var deleteList = [6]; // this column will be deleted
 			var newWidths = { 7:120 }; // colunm number: new width in px
-			
+
 			/*
 			var columns = findColumns(7);
 			for(var i = 0; i< columns.length; i++){
 				$(columns[i]).width(120);
-			} */
-			
+			}
+			*/
+
 			$('#tblNotlar > tbody > tr:nth-child(1) > td > fieldset > table > tbody > tr:nth-child(1) > td').click(function(){
 				var targetIndex = $(this).index();
 				//toggleWidth(this);
@@ -224,8 +224,7 @@
 					});
 				});
 			});
-			
-		
+
 			$('#tblNotlar > tbody > tr:nth-child(1) > td > fieldset').each(function(){
 				/*var isFirstHeader = true;*/
 				var element1 = $(this);
@@ -234,11 +233,11 @@
 					var element2 = $(this);
 					element2.children('tbody').each(function(){
 						var element3 = $(this);
-						
+
 						/*if(!isFirstHeader){
 							element3.children('tr:nth-child(1)').hide();
 						} */
-						
+
 						element3.children('tr:nth-child(1)').children('td').each(function(index){
 							var element4 = $(this);
 							if ( hideList.indexOf(index) >= 0 ) {
@@ -247,27 +246,27 @@
 								element4.parents().eq(1).children().eq(1).children().eq(index).hide();
 								element4.hide();
 							}
-							
+
 							if (index == 7 || index == 10){
 								//change column name to vize or final
 								var str = element4.children('span').html();
-								var percentage = str.substring(str.indexOf("("));
+								var percentage = str.substring(str.indexOf("(")); //extract percentage
 								var newColumnName;
 								if(index == 7)
 									newColumnName = "Vize ";
 								else
 									newColumnName = "Final ";
-									
+
 								element4.children('span').html(newColumnName + percentage);
 							}
-							
-							if (newWidths[index] !== undefined) { 
+
+							if (newWidths[index] !== undefined) {
 							   element4.width( newWidths[index] ); //set new size of column if we set it in newWidth object
-							} 
+							}
 						});
 					});
-					/* isFirstHeader = false; */
-				}); 
+
+				});
 			});
 		}
 		//delay for screen load
@@ -283,19 +282,19 @@
 	function changeLang(language) {
 		window.location.href = 'https://ebys.ege.edu.tr/login.aspx?lang=' + language;
 	}
-	
+
 	function changeBg() {
 		var imgLink;
 		if(loc.includes("en-US"))
-			imgLink = prompt("Enter a background image link: ", "https://s16.postimg.io/no4n8tu45/abstract_mosaic_background.png");
+			imgLink = prompt("Enter a background image link: ", bgImage);
 		else
-			imgLink = prompt("Bir arkaplan resmi linkini giriniz: ", "https://s16.postimg.io/no4n8tu45/abstract_mosaic_background.png");
+			imgLink = prompt("Bir arkaplan resmi linkini giriniz: ", bgImage);
 		if(imgLink !== null){
 			GM_setValue("bgImage", imgLink);
 			location.reload();
 		}
 	}
-	
+
 	function findColumns(target_index) {
 		var columns = {length: 0};
 		$('#tblNotlar > tbody > tr:nth-child(1) > td > fieldset').each(function(){
@@ -317,10 +316,10 @@
 		});
 		return columns;
 	}
-	
+
 	function toggleWidth(prop){
 		if($(prop).data("small")){
-			
+
 			$(prop).width( $(prop).data("old_width") )
 				.html(  $(prop).data("old_html") )
 				.data("small", false);
@@ -335,7 +334,7 @@
 		var index = $(prop).index();
 		$(prop).parents().eq(1).children().eq(1).children().eq(index).toggleClass("small");
 	}
-	
+
 	function addStyle(css){
 		var node = document.createElement("style");
 		node.type = "text/css";
