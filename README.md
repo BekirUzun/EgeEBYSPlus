@@ -20,8 +20,8 @@ https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-108
 [![Firefox &#10004](https://img.shields.io/badge/Firefox-%E2%9C%94-orange.svg?style=flat-square)](https://www.mozilla.org/firefox) - [![Greasemonkey](https://img.shields.io/badge/Greasemonkey--yellow.svg?style=flat-square)](http://www.greasespot.net/) ile kullanılabilir
 
 ## Ekran Görüntüleri
-![alt text][login]
-![alt text][dashboard]
+![Giriş Sayfası][login]
+![Anasayfa][dashboard]
 
 ## Kurulum
 1. [Tampermonkey](https://tampermonkey.net/) veya [Greasemonkey](http://www.greasespot.net/) yükleyin.
@@ -29,7 +29,7 @@ https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-108
 3. "Kur" veya "Devam et" gibi bir butona basıp kurulumu tamamlayın.
 
 
-[login]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/login-ss.png "Giriş Sayfası"
-[dashboard]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/dashboard-ss.png "Anasayfa Sayfası"
+[login]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/ss-login.png "Giriş Sayfası"
+[dashboard]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/ss-dashboard.png "Anasayfa"
 
 
