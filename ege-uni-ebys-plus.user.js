@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ege Üniversitesi EBYS +
 // @namespace    http://bekiruzun.com
-// @version      1.1.0
+// @version      1.1.1
 // @description  Re-styles EBYS
 // @author       Bekir Uzun
 // @match        http://ebys.ege.edu.tr/*
@@ -28,6 +28,8 @@
 (function() {
 	'use strict';
 
+	var page = getPageName();
+	var lang = getLang();
 
 	console.log(page);
 	var bgImage;
@@ -97,7 +99,7 @@
 		'.divArrow { float: left !important; }'+
 		'.headerTitle{font-size: 18px !important; }' +
 		'.appHeader.ui-corner-all { -webkit-border-radius: 0px !important; border-radius: 0px !important; background: rgba(0,0,0,0.7) !important;}'+
-		'.divContentPlaceHolder { top: 6.1em !important; background: rgba(220,255,255,0.7) !important;}'+
+		'.divContentPlaceHolder { top: 6.1em !important; background: rgba(220,255,255,0.7) !important; height: 100% }'+
 		'.splitter { background: #1d242a !important; } '+
 		'#tabs{ width: 100%; padding: 0px !important; }'+
 		'.ui-widget-header { border: none !important; background: #1d242a !important; height: 3em; border-radius: 0px !important; padding: 0px !important;}'+
@@ -120,14 +122,12 @@
 		"td { text-align:center; overflow:hidden; }" +
 		".small { white-space: nowrap; }";
 
-	var loc = "" + window.location;
-	var page;
-	if (loc.includes("login")){
+	if (page == "login"){
 		$('html').append('<div id="loading"><img class="loading-image" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png" /> </div>');
 		addStyle(loadingCss);
 		addStyle(loginCss);
-		page = "login";
-	} else if (loc.includes("dashboard") || loc == "http://ebys.ege.edu.tr/" || loc == "https://ebys.ege.edu.tr/" || loc.includes("yardim") || loc.includes("Messaging")){
+		
+	} else 	if (page == "dashboard"){
 		var fontawIV = setInterval(function(){
 			if($('head')){
 				$('head').append('<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" crossorigin="anonymous">');
@@ -138,10 +138,8 @@
 		$('html').append('<div id="loading"><img class="loading-image" src="https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png" /> </div>');
 		addStyle(loadingCss);
 		addStyle(mainCss);
-		page = "dashboard";
-	} else if (loc.includes("Ogr0201")){
+	} else if (page == "grades"){
 		addStyle(gradesCss);
-		page = "grades";
 	}
 
 	document.addEventListener("DOMContentLoaded", DOM_ContentReady);
@@ -154,7 +152,7 @@
 			$('#lblVersiyon').html($('#lblVersiyon').html() + ' +');
 
 			var options;
-			if(loc.includes("en-US")){
+			if(lang == "en"){
 				options = '<input type="button" id="change-bg" value="Change Background" style="margin-right: 5px;" /><select id="lang" style="margin-right: 10px;"><option value="en-US">English</option><option value="tr-TR">Türkçe</option></select>';
 			} else {
 				options = '<input type="button" id="change-bg" value="Arkaplanı Değiştir"  style="margin-right: 5px;" /><select id="lang" style="margin-right: 10px;"><option value="tr-TR">Türkçe</option><option value="en-US">English</option></select>';
@@ -282,10 +280,36 @@
 				});
 			});
 		}
+
 		//delay for screen load
 		setTimeout( function() {
 			$('#loading').fadeOut();
 		}, 750);
+	}
+
+	function getPageName(){
+		var l = window.location.href;
+
+		if (l.includes("login"))
+			return 'login';
+		
+		else if (l.includes("dashboard") || l == "http://ebys.ege.edu.tr/" 
+				|| l == "https://ebys.ege.edu.tr/" || l.includes("yardim") 
+				|| l.includes("Messaging"))
+			return 'dashboard';
+
+		else if (l.includes("Ogr0201"))
+			return 'grades';
+		else 
+			return 'unknown';
+	}
+
+	function getLang() {
+		var l = window.location.href
+		if (l.includes("en-US"))
+			return 'en';
+		else
+			return 'tr';
 	}
 
 	function btnClick(button) {
@@ -298,7 +322,8 @@
 
 	function changeBg() {
 		var imgLink;
-		if(loc.includes("en-US"))
+
+		if(lang == "en")
 			imgLink = prompt("Enter a background image link: ", bgImage);
 		else
 			imgLink = prompt("Bir arkaplan resmi linkini giriniz: ", bgImage);
