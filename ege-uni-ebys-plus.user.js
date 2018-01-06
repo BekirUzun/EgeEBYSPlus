@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ege Üniversitesi EBYS +
-// @namespace    http://bekiruzun.com
-// @version      1.1.1
+// @namespace    https://bekiruzun.com
+// @version      1.1.2
 // @description  Re-styles EBYS
 // @author       Bekir Uzun
 // @match        http://ebys.ege.edu.tr/*
@@ -39,9 +39,9 @@
 		bgImage = await GM.getValue('bgImage', 'https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-1080p.png');
 
 		if (page == "login")
-			addStyle('body { background:  url('+ bgImage +') !important; }');
+			addStyle('body { background:  url('+ bgImage +') !important; background-size: cover !important; }');
 		else if (page == "dashboard")
-			addStyle('#main { background:  url('+ bgImage +') !important; }');
+			addStyle('#main { background:  url('+ bgImage +') !important; background-size: cover !important; }');
 
 	})();
 
@@ -51,7 +51,7 @@
 		'@-moz-keyframes rotate { 0%{ -moz-transform:rotate(0deg); -moz-transform-origin:50% 50%; } 100%{ -moz-transform:rotate(360deg); } } '+
 		'@-webkit-keyframes rotate { 0%{ -webkit-transform:rotate(0deg); -webkit-transform-origin:50% 50%; } 100%{ -webkit-transform:rotate(360deg); } }';
 
-	var loginCss = 'body { background-size: cover !important; color: #eee !important; }' +
+	var loginCss = 'body { color: #eee !important; }' +
 		'input[type="text"], input[type="button"], input[type="password"], input[type="email"], select { transition: box-shadow .2s ease; border-radius: 3px !important; border: none !important; outline: 0 !important; line-height: 1.5em  !important; height: 2em !important; padding: 0 1em !important; background: rgba(255, 255, 255, 0.7) !important; }' +
 		'input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus { box-shadow: 0 0 10px 2px #2138b2; }'+
 		'input[type="button"]:hover, select:hover, input[type="select"]:hover { background: rgba(255, 255, 255, 0.8) !important; box-shadow: 0 0 5px 1px #2138b2 !important; }'+
@@ -63,8 +63,7 @@
 		'.btn:hover{ background-color: #e86c5b !important; }' +
 		'#lnkUnipa > span { display: table !important; padding: 10px; background: rgba(0,0,0,0.7); border-radius: 10px; }';
 
-	var mainCss = '#main { background-size: cover !important;} '+
-		'.unipaappHeader { background: #2138b2 !important; border-radius: 8px !important; border: none !important; height: auto !important; padding: 5px !important; }' +
+	var mainCss = '.unipaappHeader { background: #2138b2 !important; border-radius: 8px !important; border: none !important; height: auto !important; padding: 5px !important; }' +
 		'#reasons { padding: 15px 0 0 0 !important; }' +
 		'.shadow { border-radius: 10px !important; box-shadow: none !important;}'+
 		'#small_promos { background: rgba(0,0,0,0.5) !important;  border: 3px solid rgba(0,0,0,0) !important; height: 92% !important; border-radius: 10px !important; }'+
