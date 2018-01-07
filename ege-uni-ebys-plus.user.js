@@ -1,16 +1,14 @@
 // ==UserScript==
 // @name         Ege Üniversitesi EBYS +
-// @namespace    https://bekiruzun.com
-// @version      1.1.2
+// @namespace    http://bekiruzun.com
+// @version      1.1.3
 // @description  Re-styles EBYS
 // @author       Bekir Uzun
 // @match        http://ebys.ege.edu.tr/*
 // @match        https://ebys.ege.edu.tr/*
 // @run-at       document-start
 // @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png
-// @license      https://creativecommons.org/licenses/by-sa/4.0/
-// @homepage     https://github.com/BekirUzun/EgeEBYSPlus
-// @supportURL   https://github.com/BekirUzun/EgeEBYSPlus/issues
+// @homepageURL  https://github.com/BekirUzun/EgeEBYSPlus
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // @updateURL    https://github.com/BekirUzun/EgeEBYSPlus/blob/master/ege-uni-ebys-plus.user.js
 // @downloadURL  https://github.com/BekirUzun/EgeEBYSPlus/blob/master/ege-uni-ebys-plus.user.js
@@ -25,6 +23,8 @@
 *	Because it's still in development process.
 *	I am not responsible and liable for any loss or damage caused by this userscript.
 */
+// @license      https://creativecommons.org/licenses/by-sa/4.0/
+// @supportURL   https://github.com/BekirUzun/EgeEBYSPlus/issues
 (function() {
 	'use strict';
 
@@ -57,11 +57,11 @@
 		'input[type="button"]:hover, select:hover, input[type="select"]:hover { background: rgba(255, 255, 255, 0.8) !important; box-shadow: 0 0 5px 1px #2138b2 !important; }'+
 		'#rightTD > table {background: rgba(0,0,0,0.7); border-radius: 20px; padding: 0 2em 1em 2em; } '+
 		'.cssAppBigBold { color: #eee !important; font-size: 2em !important; }'+
-		'a:hover, #lblVersiyon:hover { border-bottom-color: transparent !important; color: #0033dd !important;  }' +
-		'a, #lblVersiyon { transition: color 0.2s ease; color: #4169e1 !important; text-decoration: none  !important; font-weight: bold; }'+
-		'.btn { background-image: none !important; text-shadow: none !important; transition: background-color 0.5s ease; background-color: #ed4933 !important; box-shadow: none !important; color: #ffffff !important; background-color: transparent; border-radius: 3px; border: 0; cursor: pointer; display: inline-block; font-weight: 600; height: 2.5em !important; width: auto !important; letter-spacing: 0.1em; line-height: 2.5em; padding: 0 1em; text-align: center; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}'+
+		'a:hover, #lblVersiyon:hover { border-bottom-color: transparent !important; color: #42a5f5 !important;  }' +
+		'a, #lblVersiyon { transition: color 0.2s ease; color: #0077c2 !important; text-decoration: none  !important; font-weight: bold; }'+
+		'.btn { background-image: none !important; text-shadow: none !important; transition: background-color 0.2s ease; background-color: #ed4933 !important; box-shadow: none !important; color: #ffffff !important; background-color: transparent; border-radius: 3px; border: 0; cursor: pointer; display: inline-block; font-weight: 600; height: 2.5em !important; width: auto !important; letter-spacing: 0.1em; line-height: 2.5em; padding: 0 1em; text-align: center; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}'+
 		'.btn:hover{ background-color: #e86c5b !important; }' +
-		'#lnkUnipa > span { display: table !important; padding: 10px; background: rgba(0,0,0,0.7); border-radius: 10px; }';
+		'#lnkUnipa > span { display: table !important; padding: 10px; background: rgba(0,0,0,0.7); border-radius: 10px; text-align: center; }';
 
 	var mainCss = '.unipaappHeader { background: #2138b2 !important; border-radius: 8px !important; border: none !important; height: auto !important; padding: 5px !important; }' +
 		'#reasons { padding: 15px 0 0 0 !important; }' +
@@ -91,9 +91,9 @@
 		'.headTitle > table{ height: 45px !important; }' +
 		'.dashboardUiIcons.logo { background: none !important; }'+
 		'.ui-tabs-icons { background: none !important }'+
-		'.divHelp, .divSupport, .divLogin, .divAdmin { transition: color 0.5s ease; background: none !important; font-size: 14px !important; background-position: 5px 1px !important; padding: initial !important; letter-spacing: 0.05em !important; color: white;}'+
+		'.divHelp, .divSupport, .divLogin, .divAdmin { transition: color 0.2s ease; background: none !important; font-size: 14px !important; background-position: 5px 1px !important; padding: initial !important; letter-spacing: 0.05em !important; color: white;}'+
 		'.divHelp a span{font-size: 14px !important; } '+
-		'.divHelp:hover, .divSupport:hover, .divLogin:hover, .divAdmin:hover { color: #77ffff }'+
+		'.divHelp:hover, .divSupport:hover, .divLogin:hover, .divAdmin:hover { color: #42a5f5 }'+
 		'.divAdmin span, .divLogin a, .divSupport span, .divHelp a span, .divHelp a { padding-left: 0px !important; color: inherit !important; } '+
 		'.divArrow { float: left !important; }'+
 		'.headerTitle{font-size: 18px !important; }' +
