@@ -10,8 +10,8 @@
 // @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png
 // @homepageURL  https://github.com/BekirUzun/EgeEBYSPlus
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
-// @updateURL    https://github.com/BekirUzun/EgeEBYSPlus/blob/master/ege-uni-ebys-plus.user.js
-// @downloadURL  https://github.com/BekirUzun/EgeEBYSPlus/blob/master/ege-uni-ebys-plus.user.js
+// @updateURL    https://github.com/BekirUzun/EgeEBYSPlus/raw/master/ege-uni-ebys-plus.user.js
+// @downloadURL  https://github.com/BekirUzun/EgeEBYSPlus/raw/master/ege-uni-ebys-plus.user.js
 // @grant        GM.addStyle
 // @grant        GM.setValue
 // @grant        GM.getValue
