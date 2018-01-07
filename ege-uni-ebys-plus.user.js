@@ -304,7 +304,7 @@
 	}
 
 	function getLang() {
-		var l = window.location.href
+		var l = window.location.href;
 		if (l.includes("en-US"))
 			return 'en';
 		else
