@@ -15,7 +15,7 @@ https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-108
 **Not:** Bu eklenti sadece arayüzü değiştirir. Verileriniz ile ilgili herhangi bir değişiklik yapmaz. Ama dilerseniz notları %25 arttırma ile ilgili bir özellik isteği gönderebilirsiniz.
 
 ## Desteklenen Tarayıcılar
-[![Chrome &#10004](https://img.shields.io/badge/Chrome-%E2%9C%94-green.svg?style=flat-square)](http://www.google.com/chrome/) -   [![Tampermonkey](https://img.shields.io/badge/Tampermonkey--green.svg?style=flat-square)](https://tampermonkey.net/) ile kullanılabilir
+[![Chrome &#10004](https://img.shields.io/badge/Chrome-%E2%9C%94-green.svg?style=flat-square)](http://www.google.com/chrome/) -   [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-4.5-green.svg?style=flat-square)](https://tampermonkey.net/) ile kullanılabilir
 
 [![Firefox &#10004](https://img.shields.io/badge/Firefox-%E2%9C%94-orange.svg?style=flat-square)](https://www.mozilla.org/firefox) - [![Greasemonkey](https://img.shields.io/badge/Greasemonkey--yellow.svg?style=flat-square)](http://www.greasespot.net/) ile kullanılabilir
 
