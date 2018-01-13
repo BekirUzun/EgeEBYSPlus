@@ -25,8 +25,9 @@ https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/bg-108
 
 ## Kurulum
 1. [Tampermonkey](https://tampermonkey.net/) veya [Greasemonkey](http://www.greasespot.net/) yükleyin.
-2. [Bu link](https://github.com/BekirUzun/EgeEBYSPlus/raw/master/ege-uni-ebys-plus.user.js)'e tıklayın.
-3. "Kur" veya "Devam et" gibi bir butona basıp kurulumu tamamlayın.
+2. [Bu link](https://greasyfork.org/tr/scripts/37338-ege-%C3%BCniversitesi-ebys)'e tıklayın.
+3. Yeşil "Bu scripti kur" butonuna tıklayın.
+4. Greasemonkey'in veya Tampermonkey'in sayfası açılacaktır. "Kur" veya "Devam et" gibi bir butona basıp kurulumu tamamlayın.
 
 
 [login]: https://github.com/BekirUzun/EgeEBYSPlus/blob/master/src/images/ss-login.png "Giriş Sayfası"
