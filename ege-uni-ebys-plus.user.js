@@ -7,7 +7,7 @@
 // @match        http://ebys.ege.edu.tr/*
 // @match        https://ebys.ege.edu.tr/*
 // @run-at       document-start
-// @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/master/src/images/ege-logo.png
+// @icon         https://raw.githubusercontent.com/BekirUzun/EgeEBYSPlus/gh-pages/favicon.png
 // @homepageURL  https://github.com/BekirUzun/EgeEBYSPlus
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // @grant        GM.addStyle
